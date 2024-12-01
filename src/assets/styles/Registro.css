@@ -1,0 +1,133 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Contenedor del registro */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh; /* Reducido de 85vh a 75vh para menos altura */
+    padding: 20px;
+}
+
+.register-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.register-image {
+    flex: 1; /* Esto asegura que la imagen ocupe la mitad del espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-image img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    max-width: 600px; /* Limitar el tamaño máximo de la imagen */
+}
+
+.register-form {
+    flex: 1; /* Esto asegura que el formulario ocupe la mitad del espacio */
+    padding: 20px; /* Reducido el padding */
+    max-width: 500px;
+    width: 450px;
+}
+
+.register-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #003cff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #003cff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #002bb3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .register-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .register-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .register-form {
+        padding: 20px;
+    }
+
+    .register-image img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .register-form h2 {
+        font-size: 20px;
+    }
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+  
