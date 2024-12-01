@@ -11,8 +11,12 @@
 
 .servicio-header h3 {
     font-size: 2.5em;
-    color: #003cff;
+    color: #333;
+    font-weight: bold;
     margin-bottom: 10px;
+    border-bottom: 3px solid #003cff    ; /* Línea decorativa */
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 .servicio-header p {
