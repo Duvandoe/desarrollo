@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../assets/img/logo-Photoroom (1).png';
 import Inicio from './inicio';
 import Servicio from './servicio';
+import Contacto from './contacto';
 
 function home() {
   return (
@@ -17,6 +18,7 @@ function home() {
         </section>
         <Inicio />
         <Servicio />
+        <Contacto />
     </>
     
   )
