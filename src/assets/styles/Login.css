@@ -45,14 +45,35 @@
     color: #333;
   }
   
-  .input-group input {
+  .input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon input {
     width: 100%;
-    padding: 10px;
+    padding: 10px 10px 10px 30px; /* Añadir espacio para el icono */
     margin-top: 5px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1em;
     background-color: #f9f9f9;
+  }
+  
+  .input-with-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #003cff;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #003cff;
   }
   
   .input-group input:focus {
@@ -75,9 +96,12 @@
   .btn-login:hover {
     background-color: #0026cc;
   }
-
-
   
+  .btn-login i {
+    margin-right: 8px;
+  }
+  
+  /* Estilos responsivos */
   @media (max-width: 768px) {
     .login-container {
       padding: 30px;
@@ -113,4 +137,7 @@
       font-size: 0.9em;
     }
   }
+    .register-link{
+        margin-top: 10px;
+    }  
   
