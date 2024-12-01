@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import './App.css';
 import Navbar from './componentes/navbar';
 import Home from './pages/home';
+import Footer from './componentes/footer';
 
 
 function App() {
@@ -23,7 +24,7 @@ function Main(){
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-
+      <Footer />
     </>
   );
 }

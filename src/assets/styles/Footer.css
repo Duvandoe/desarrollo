@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    color: white;
+    padding: 10px 6%;
+    border-top: 1px solid gray;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+}
+
+.footer ul li a{
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer ul li a:hover{
+    color: #003cff;
+}
+
+.logo h2:hover{
+    color:#003cff;
+}
+
+.copyright span:hover{
+    color: #003cff;
+}
+
+svg{
+    margin-top: 5px;
+    margin-left: 10px;
+    color: black;
+}
+
+.logo{
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;    
+}
+
+.logo h2{
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.copyright{
+    width: 100%; /* Ocupa toda la fila */
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid gray; /* Línea sobre el texto de copyright */
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 10px;
+    }
+}

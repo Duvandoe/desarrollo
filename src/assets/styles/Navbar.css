@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all .2s ease;
+    background-color: #003cff;
+    color: white;
+    border-radius: 9px;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    color: white;
+    padding: 10px 10%;
+    border-bottom: 1px solid gray;
+}
+
+.navbar h2{
+    color: black;
+    font-weight: 100;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+.navbar ul li a:hover{
+    color: #003cff;
+}
+
+.navbar img{
+    width: 30px;
+    height: 40px;
+}
+
+.logo{
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;    
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Mantén los elementos apilados */
+        align-items: flex-start; /* Alinea a la izquierda */
+        padding: 10px 5%; /* Reduce el padding */
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: row; /* Logo y toggle menú en fila */
+        align-items: center;
+        justify-content: space-between;
+        width: 100%; /* Ocupar todo el ancho */
+    }
+
+    .toggle-menu {
+        display: flex; /* Muestra el botón de menú */
+        cursor: pointer;
+        font-size: 25px;
+        color: black;
+    }
+
+    .navbar ul {
+        display: none; /* Oculta el menú inicialmente */
+        flex-direction: column; /* Menú vertical */
+        width: 100%; /* Abarca todo el ancho */
+        background-color: white;
+        border-top: 1px solid gray; /* Línea separadora */
+    }
+
+    .navbar ul li {
+        display: block; /* Cada ítem en una fila */
+        padding: 10px 0; /* Más espacio entre enlaces */
+        text-align: left;
+    }
+
+    .navbar ul li a {
+        font-size: 18px; /* Aumenta el tamaño del texto */
+    }
+
+    .login {
+        margin-top: 5px; /* Espaciado superior */
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        width: 100%; /* Ocupar todo el ancho */
+    }
+
+    .logo h2{
+        display: none;
+    }
+
+    .show-menu {
+        display: flex !important; /* Muestra el menú al hacer clic */
+    }
+}
+
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 769px) {
+    .toggle-menu {
+        display: none; /* Oculta el botón de menú en pantallas grandes */
+    }
+}
