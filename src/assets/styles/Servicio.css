@@ -1,83 +1,94 @@
-/* Servicios Section */
+/* Estilos generales para la sección de servicios */
 .servicio {
-    background-color: #f9f9f9; /* Fondo suave */
     padding: 40px 20px;
+    background-color: #f9f9f9;
 }
 
-.servicio-content {
-    max-width: 800px;
-    margin: 0 auto;
+.servicio-header {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.servicio h3 {
+.servicio-header h3 {
     font-size: 2.5em;
-    color: #333;
-    font-weight: bold;
+    color: #003cff;
     margin-bottom: 10px;
-    border-bottom: 3px solid #003cff    ; /* Línea decorativa */
-    display: inline-block;
-    padding-bottom: 5px;
 }
 
-.servicio h4 {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 20px;
-    line-height: 1.8;
-}
-
-.servicio p {
+.servicio-header p {
     font-size: 1em;
-    color: #666;
-    text-align: left;
+    color: #555;
     line-height: 1.6;
+}
+
+/* Estilo de la cuadrícula usando Flexbox */
+.servicio-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    gap: 20px;
+    justify-content: space-between; /* Distribuye las tarjetas de manera uniforme */
+}
+
+/* Tarjetas de servicio */
+.servicio-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 30%; /* Establece un ancho del 30% para que sean tres por fila */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+}
+
+/* Estilo de la imagen */
+.servicio-card img {
+    width: 400px;
     margin-bottom: 15px;
 }
 
-.servicio p b {
+.servicio-card h4 {
+    font-size: 1.5em;
     color: #003cff;
-    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
-.servicio ul {
-    list-style-type: disc;
-    margin: 10px 20px;
-    padding: 0;
-    text-align: left;
-}
-
-.servicio ul li {
+.servicio-card p {
     font-size: 1em;
     color: #555;
-    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
-.servicio-content p::before {
-    content: "•";
-    color: #003cff;
-    margin-right: 10px;
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.servicio-content p:last-child {
-    margin-bottom: 0;
-}
-
-/* Responsive Styles */
+/* Responsivo */
 @media (max-width: 768px) {
-    .servicio-content {
-        padding: 0 10px;
-    }
-
-    .servicio h3 {
+    .servicio-header h3 {
         font-size: 2em;
     }
 
-    .servicio h4 {
-        font-size: 1em;
+    .servicio-card h4 {
+        font-size: 1.3em;
     }
 
-    .servicio p {
+    .servicio-card p {
         font-size: 0.9em;
     }
+
+    /* Ajuste en dispositivos pequeños */
+    .servicio-card {
+        width: 45%; /* Dos tarjetas por fila en pantallas medianas */
+    }
 }
+
+@media (max-width: 480px) {
+    /* En pantallas muy pequeñas, una tarjeta por fila */
+    .servicio-card {
+        width: 100%;
+    }
+}
+
+  

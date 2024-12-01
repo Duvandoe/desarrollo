@@ -67,7 +67,7 @@ function footer() {
                     </ul>
 
                     <div className='copyright'>
-                        <p>© 2024 <span>ServTIC™.</span> Derechos reservados a Flowbite.</p>
+                        <p>© 2024 <span>ServTIC™.</span> Derechos reservados a ServTIC.</p>
                     </div>
                 </div>
             </div>

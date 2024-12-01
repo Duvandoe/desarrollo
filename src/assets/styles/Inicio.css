@@ -36,6 +36,11 @@
     text-align: center;
 }
 
+.mision:hover, .vision:hover , .valores:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
 .mision h3, .vision h3, .valores h3 {
     margin-top: 10px;
     margin-bottom: 10px;
