@@ -126,3 +126,51 @@ button{
         display: none; /* Oculta el botón de menú en pantallas grandes */
     }
 }
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    background-color: #F2F3F5;
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-between; /* Distribuye la imagen y texto */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 5rem 9%; /* Espaciado interno */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagen: Ocupa la mitad de la pantalla */
+.inicio-img {
+    flex-basis: 50%; /* Toma el 50% del ancho */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+}
+
+.inicio-img img {
+    width: 100px; /* Asegura que ocupe todo el espacio disponible */
+    height: auto; /* Mantén las proporciones */
+    object-fit: cover; /* Recorta la imagen si es necesario */
+}
+
+/* Contenido del texto */
+.inicio-content {
+    flex-basis: 50%; /* Toma el 50% del ancho */
+    padding: 2rem; /* Espaciado interno */
+    color: var(--text-color); /* Color de texto según la variable */
+}
+
+.inicio-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.inicio-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}

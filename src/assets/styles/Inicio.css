@@ -1,0 +1,71 @@
+.nosotros-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.nosotros-content {
+    text-align: center;
+}
+
+.nosotros-content p{
+    margin-top: 40px;
+}
+
+.linea{
+    border-top: 1px solid gray;
+}
+
+.mision-vision {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    gap: 20px; /* Espaciado entre los elementos */
+    justify-content: space-between; /* Distribuye uniformemente */
+    margin-top: 40px;
+}
+
+
+.mision, .vision, .valores {
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    flex: 1 1 30%; /* Ajusta ancho relativo al espacio */
+    min-width: 250px; /* Mínimo tamaño para evitar deformaciones */
+    text-align: center;
+}
+
+.mision h3, .vision h3, .valores h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #003cff; /* Azul principal */
+}
+
+.mision p, .vision p, .valores p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333; /* Gris oscuro para legibilidad */
+}
+
+.mision svg, .vision svg, .valores svg {
+    font-size: 2.5rem;
+    color: #003cff; /* Azul principal */
+}
+
+.valores p {
+    margin-top: 10px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .mision-vision {
+        flex-direction: column; /* Apila los elementos */
+        gap: 15px; /* Reduce el espacio */
+    }
+
+    .mision, .vision, .valores {
+        width: 100%; /* Elementos a ancho completo */
+    }
+}
