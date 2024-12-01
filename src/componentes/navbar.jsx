@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div>
       <header>
-        <div className="container">
+        <div>
           <nav className="navbar">
             {/* Logo y Toggle Menu juntos */}
             <div className="logo">
@@ -43,8 +43,8 @@ function Navbar() {
             </ul>
 
             {/* Botón de Login */}
-            <div className="login">
-              <Link to="/">
+            <div className="boton-login">
+              <Link to="/login">
                 <button>Iniciar Sesión</button>
               </Link>
             </div>
