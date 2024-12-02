@@ -32,13 +32,13 @@ function Navbar() {
                 <Link to="/">Inicio</Link>
               </li>
               <li>
-                <Link to="/">Acerca de nosotros</Link>
+                <a href="/#nosotros">Acerca de nosotros</a>
               </li>
               <li>
-                <Link to="/">Servicios</Link>
+                <a href="/#servicio">Servicios</a>
               </li>
               <li>
-                <Link to="/">Contacto</Link>
+                <a href="/#contacto">Contacto</a>
               </li>
             </ul>
 
