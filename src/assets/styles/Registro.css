@@ -130,4 +130,12 @@ button:hover {
     top: 10px;
 }
 
+.register-title{
+    text-align: center;
+}
+
+.login-redirect{
+    margin-top: 10px;
+    text-align: center;
+}
   

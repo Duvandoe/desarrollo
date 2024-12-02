@@ -39,7 +39,7 @@ function Registro() {
 
         {/* Formulario de registro */}
         <div className="register-form">
-          <h2>Registrarse en ServiTIC</h2>
+          <h2 className='register-title'>Registrate en ServiTIC</h2>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Nombre Completo</label>
@@ -128,8 +128,8 @@ function Registro() {
                 required
               />
             </div>
-
             <button type="submit">Registrarse</button>
+            <p className='login-redirect'>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a></p>
           </form>
         </div>
       </div>
