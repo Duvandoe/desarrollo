@@ -16,13 +16,13 @@ function Sidebar() {
           </Link>
         </li>
         <li>
-          <Link to="/employees" className="sidebar-item">
+          <Link to="/gestordeempleado" className="sidebar-item">
             <FaUsers className="sidebar-icon" /> Gestión de Empleados
           </Link>
         </li>
         <li>
           <Link to="/tasks" className="sidebar-item">
-            <FaTasks className="sidebar-icon" /> Tareas Asignadas
+            <FaTasks className="sidebar-icon" /> Tareas
           </Link>
         </li>
         <li>
