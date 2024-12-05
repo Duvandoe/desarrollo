@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../assets/styles/ReparacionesEmpleado.css';
 
 const ReparacionesEmpleado = () => {
+  // Estado de reparaciones disponibles y asignadas
   const [reparacionesDisponibles, setReparacionesDisponibles] = useState([
     {
       id: '1',
@@ -25,13 +26,21 @@ const ReparacionesEmpleado = () => {
       imagen: 'https://via.placeholder.com/150',
     },
   ]);
-
   const [reparacionesAsignadas, setReparacionesAsignadas] = useState([]);
+  const [reparacionesFinalizadas, setReparacionesFinalizadas] = useState([]); // Nuevo estado para reparaciones finalizadas
 
+  // Asignar reparación
   const asignarReparacion = (id) => {
     const reparacion = reparacionesDisponibles.find((r) => r.id === id);
     setReparacionesAsignadas([...reparacionesAsignadas, reparacion]);
     setReparacionesDisponibles(reparacionesDisponibles.filter((r) => r.id !== id));
+  };
+
+  // Finalizar reparación
+  const finalizarReparacion = (id) => {
+    const reparacion = reparacionesAsignadas.find((r) => r.id === id);
+    setReparacionesFinalizadas([...reparacionesFinalizadas, reparacion]); // Agregar a reparaciones finalizadas
+    setReparacionesAsignadas(reparacionesAsignadas.filter((r) => r.id !== id)); // Eliminar de las asignadas
   };
 
   return (
@@ -76,6 +85,12 @@ const ReparacionesEmpleado = () => {
                   <p><strong>Detalles:</strong> {reparacion.detalles}</p>
                   <p><strong>Fecha de solicitud:</strong> {reparacion.fechaSolicitud}</p>
                   <p><strong>Estado:</strong> En Proceso</p>
+                  <button
+                    className="btn-asignar"
+                    onClick={() => finalizarReparacion(reparacion.id)}
+                  >
+                    Finalizar Reparación
+                  </button>
                 </div>
               </div>
             ))
@@ -84,10 +99,33 @@ const ReparacionesEmpleado = () => {
           )}
         </div>
       </div>
+
+      {/* Reparaciones finalizadas */}
+      <div className="reparaciones-finalizadas">
+        <h2>Reparaciones Finalizadas</h2>
+        <div className="reparaciones-list">
+          {reparacionesFinalizadas.length > 0 ? (
+            reparacionesFinalizadas.map((reparacion) => (
+              <div className="reparacion-card" key={reparacion.id}>
+                <img src={reparacion.imagen} alt={reparacion.dispositivo} className="reparacion-imagen" />
+                <div className="reparacion-detalles">
+                  <h3>{reparacion.dispositivo}</h3>
+                  <p><strong>Detalles:</strong> {reparacion.detalles}</p>
+                  <p><strong>Fecha de solicitud:</strong> {reparacion.fechaSolicitud}</p>
+                  <p><strong>Estado:</strong> Finalizada</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No hay reparaciones finalizadas.</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
 
 export default ReparacionesEmpleado;
+
 
 
