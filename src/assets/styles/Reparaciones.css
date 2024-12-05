@@ -1,0 +1,215 @@
+/* Contenedor de la página de dispositivos en reparación */
+.device-repair-container {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .device-repair-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo de las tarjetas */
+  .device-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .device-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .device-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Imagen del dispositivo */
+  .device-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Detalles dentro de la tarjeta */
+  .device-details {
+    margin-top: 15px;
+  }
+  
+  .device-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .device-details p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Botón de ver detalles */
+  .view-details-btn {
+    background-color: #003cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #0052cc;
+  }
+  
+  /* Estilos del modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  #details{
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  .modal-device-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .modal-device-details {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .modal-device-details p {
+    margin-bottom: 10px;
+  }
+  
+  /* Botón para cerrar el modal */
+  .modal-close-btn {
+    background-color: #003cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .modal-close-btn:hover {
+    background-color: #0052cc;
+  }
+
+  /* Modal de añadir reparación */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Botón para cerrar el modal */
+  .modal-close-btn {
+    background-color: #003cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Botón para añadir reparación */
+.add-repair-btn-container {
+    display: flex;
+    margin-bottom: 20px; /* Añade un margen inferior para separar del contenido */
+    width: 250px;
+}
+
+.btn-añadir {
+    background-color: #003cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-añadir:hover {
+    background-color: #0052cc;
+    transform: scale(1.05); /* Añade un ligero efecto de escala al pasar el mouse */
+}

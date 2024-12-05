@@ -32,10 +32,10 @@ function Navbarcli() {
             {/* Menú de navegación */}
             <ul className={menuOpen ? 'show-menu' : ''}>
               <li>
-                <Link to="#">Inicio</Link>
+                <Link to="/inicioclien">Inicio</Link>
               </li>
               <li>
-                <a href="#">Reparaciones</a>
+                <a href="/reparaciones">Reparaciones</a>
               </li>
             </ul>
 

@@ -34,7 +34,7 @@ function inicioclien() {
     <>
       <section className="iniciocli" id="iniciocli">
         <div className="iniciocli-content">
-          <h2>¡Bienvenido usuario a ServTIC!</h2>
+          <h2>¡Bienvenido Cliente de ServTIC!</h2>
           <p>¡Aqui podras ver a nuestro equipo de reparaciones con su respectiva informacion!</p>
         </div>
         <div className="iniciocli-grid">

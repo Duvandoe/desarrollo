@@ -13,6 +13,7 @@ import Gestoradmin from './pages/gestoradmin';
 import Gestordecliente from './pages/clientes';
 import Gestordeempleado from './pages/empleados';
 import Gestordetarea from './pages/tareassidebar';
+import Reparaciones from './pages/reparaciones';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function Main(){
   const location = useLocation();
   const inicionologin = ['/', '/login', '/registro'];
   const isInicioLogin = inicionologin.includes(location.pathname);
-  const clientepage = ['/inicioclien'];
+  const clientepage = ['/inicioclien', '/reparaciones'];
   const isClientePage = clientepage.includes(location.pathname);
   const gestoradmin = ['/gestoradmin', '/gestordecliente', '/gestordeempleado', '/gestordetarea'];
   const isGestorAdmin = gestoradmin.includes(location.pathname);
@@ -41,6 +42,7 @@ function Main(){
         <Route path="/login" element={<Login />} />
         <Route path="/registro" element={<Registro />} />
         <Route path='/inicioclien' element={<Cliente/>}/>
+        <Route path='/reparaciones' element={<Reparaciones/>}/>
         <Route path='/gestoradmin' element={<Gestoradmin/>}/>
         <Route path='/gestordecliente' element={<Gestordecliente/>}/>
         <Route path='/gestordeempleado' element={<Gestordeempleado/>}/>
