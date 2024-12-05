@@ -12,6 +12,7 @@ import Footercli from './componentes/footercli';
 import Gestoradmin from './pages/gestoradmin';
 import Gestordecliente from './pages/clientes';
 import Gestordeempleado from './pages/empleados';
+import EditarEmpleado from './componentes/editarempleado';
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function Main(){
   const isInicioLogin = inicionologin.includes(location.pathname);
   const clientepage = ['/inicioclien'];
   const isClientePage = clientepage.includes(location.pathname);
-  const gestoradmin = ['/gestoradmin', '/gestordecliente', '/gestordeempleado'];
+  const gestoradmin = ['/gestoradmin', '/gestordecliente', '/gestordeempleado', '/editarempleado', '/editarempleado/:id'];
   const isGestorAdmin = gestoradmin.includes(location.pathname);
   return(
     <>
@@ -43,6 +44,8 @@ function Main(){
         <Route path='/gestoradmin' element={<Gestoradmin/>}/>
         <Route path='/gestordecliente' element={<Gestordecliente/>}/>
         <Route path='/gestordeempleado' element={<Gestordeempleado/>}/>
+        <Route path='/editarempleado' element={<EditarEmpleado/>}/>
+        <Route path='/editarempleado/:id' element={<EditarEmpleado/>}/>
       </Routes>
       {!isClientePage && !isGestorAdmin && <Footer />}
       {!isInicioLogin && !isGestorAdmin && <Footercli />}

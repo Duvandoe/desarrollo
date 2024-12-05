@@ -49,7 +49,7 @@ const EmpleadoProfile = () => {
                   <td>{empleado.salario}</td>
                   <td>{empleado.idUsuario}</td>
                   <td>
-                    <Link to={`/edit-client/${empleado.idEmpleado}`} className="btn">Editar Empleado</Link>
+                    <Link to={`/editarempleado/${empleado.idEmpleado}`} className="btn">Editar Empleado</Link>
                   </td>
                 </tr>
               ))}
