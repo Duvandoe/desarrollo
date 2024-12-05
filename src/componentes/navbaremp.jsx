@@ -33,10 +33,10 @@ function Navbaremp() {
             {/* Menú de navegación */}
             <ul className={menuOpen ? 'show-menu' : ''}>
               <li>
-                <Link to="#">Inicio</Link>
+                <Link to="/inicioemp">Inicio</Link>
               </li>
               <li>
-                <a href="#">Reparaciones</a>
+                <a href="/reparacionemp">Reparaciones</a>
               </li>
             </ul>
 

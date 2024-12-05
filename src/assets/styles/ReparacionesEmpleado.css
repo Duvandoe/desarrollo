@@ -1,0 +1,88 @@
+.reparaciones-empleado-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .reparaciones-disponibles,
+  .reparaciones-asignadas {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reparaciones-disponibles h2,
+  .reparaciones-asignadas h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .reparaciones-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center; /* Asegura que las tarjetas estén centradas */
+  }
+  
+  .reparacion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    width: 100%;  /* Se ajusta al 100% del contenedor */
+    max-width: 300px;  /* Limita el tamaño máximo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .reparacion-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .reparacion-imagen {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .reparacion-detalles h3 {
+    font-size: 1.2rem;
+    color: #003cff;
+    margin-bottom: 10px;
+  }
+  
+  .reparacion-detalles p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .btn-asignar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn-asignar:hover {
+    background-color: #218838;
+  }
+  
+  
+  

@@ -5,7 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import '../assets/styles/Footercli.css';
 
-function Footercli() {
+function Footeremp() {
   return (
     <div>
         <footer>
@@ -22,7 +22,7 @@ function Footercli() {
                             <Link to="/inicioemp">Inicio</Link>
                         </li>
                         <li>
-                            <a href="#">Reparaciones</a>
+                            <a href="/reparacionemp">Reparaciones</a>
                         </li>
                     </ul>
                     <ul>
@@ -70,4 +70,4 @@ function Footercli() {
   )
 }
 
-export default Footercli
+export default Footeremp

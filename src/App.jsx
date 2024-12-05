@@ -17,6 +17,7 @@ import Gestordetarea from './pages/tareassidebar';
 import Reparaciones from './pages/reparaciones';
 import Navbaremp from './componentes/navbaremp';
 import Empleado from './pages/inicioemp';
+import ReparacionesEmp from './pages/reparacionemp';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function Main(){
   const isClientePage = clientepage.includes(location.pathname);
   const gestoradmin = ['/gestoradmin', '/gestordecliente', '/gestordeempleado', '/gestordetarea'];
   const isGestorAdmin = gestoradmin.includes(location.pathname);
-  const empleadopage = ['/inicioemp'];
+  const empleadopage = ['/inicioemp', '/reparacionemp'];
   const isEmpleadoPage = empleadopage.includes(location.pathname);
   return(
     <>
@@ -50,10 +51,12 @@ function Main(){
         <Route path='/inicioclien' element={<Cliente/>}/>
         <Route path='/inicioemp' element={<Empleado/>}/>
         <Route path='/reparaciones' element={<Reparaciones/>}/>
+        <Route path='/reparacionemp' element={<ReparacionesEmp/>}/>
         <Route path='/gestoradmin' element={<Gestoradmin/>}/>
         <Route path='/gestordecliente' element={<Gestordecliente/>}/>
         <Route path='/gestordeempleado' element={<Gestordeempleado/>}/>
         <Route path='/gestordetarea' element={<Gestordetarea/>}/>
+
       </Routes>
       {!isClientePage && !isGestorAdmin && !isEmpleadoPage && <Footer />}
       {!isInicioLogin && !isGestorAdmin && !isEmpleadoPage && <Footercli />}
