@@ -1,9 +1,9 @@
-/* Sidebar */
+/* Estilos del Sidebar */
 .sidebar {
   width: 250px;
-  background: #003cff;
+  background-color: #003cff;
   color: white;
-  height: 100vh; 
+  height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -11,11 +11,34 @@
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilos para el encabezado del sidebar (logo y título) */
+.sidebar-header {
+  display: flex;
+  align-items: center; /* Alinea el logo y el texto verticalmente */
+  margin-bottom: 20px;
+  justify-content: flex-start; /* Alinea todo al principio */
+}
+
+.sidebar-logo {
+  width: 40px; /* Ajusta el tamaño del logo */
+  height: 40px; /* Asegura que el logo sea cuadrado */
+  margin-right: 15px; /* Espacio entre el logo y el texto */
+  object-fit: contain;
+}
+
 .sidebar-header h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: white;
-  text-align: center;
-  padding: 10px 0;
+  margin: 0; /* Elimina márgenes del título */
+}
+
+/* Estilo de los elementos de navegación */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Hace que el ul ocupe todo el espacio disponible */
 }
 
 .sidebar-item {
@@ -26,7 +49,6 @@
   color: white;
   text-decoration: none;
   border-radius: 8px;
-  gap: 5px;
   margin: 10px 0;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -36,26 +58,10 @@
   transform: translateX(10px);
 }
 
-.sidebar-footer {
-  margin-top: auto;
-  text-align: center;
-  padding-top: 20px;
+.sidebar-item .sidebar-icon {
+  margin-right: 15px;
+  font-size: 1.4rem;
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%; /* Sidebar ocupa todo el ancho en pantallas pequeñas */
-    height: auto;
-  }
-
-  .sidebar-header h2 {
-    font-size: 1.4rem;
-  }
-
-  .sidebar-item {
-    font-size: 1rem;
-    padding: 10px;
-  }
-}
 
   

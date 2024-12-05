@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
 import '../assets/styles/MainPanel.css'; // Importamos el archivo CSS para los estilos
 
@@ -19,11 +19,62 @@ const MainPanel = () => {
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28'];
 
+  // Estado para los valores animados
+  const [pendingRepairs, setPendingRepairs] = useState(15);
+  const [completedRepairs, setCompletedRepairs] = useState(200);
+  const [totalIncome, setTotalIncome] = useState(45600);
+
+  // Valores finales
+  const finalPendingRepairs = 400;
+  const finalCompletedRepairs = 1000;
+  const finalTotalIncome = 500000;
+
+  // Animar los valores
+  useEffect(() => {
+    // Aumentar las reparaciones pendientes
+    const pendingInterval = setInterval(() => {
+      setPendingRepairs((prev) => {
+        if (prev < finalPendingRepairs) {
+          return prev + 1;
+        }
+        return prev + 0.1; // Continúa incrementando lentamente
+      });
+    }, 10000); // Actualización cada 10 segundos
+
+    // Aumentar las reparaciones completadas
+    const completedInterval = setInterval(() => {
+      setCompletedRepairs((prev) => {
+        if (prev < finalCompletedRepairs) {
+          return prev + 1;
+        }
+        return prev + 0.5; // Continúa incrementando lentamente
+      });
+    }, 10000); // Actualización cada 10 segundos
+
+    // Aumentar los ingresos totales
+    const incomeInterval = setInterval(() => {
+      setTotalIncome((prev) => {
+        if (prev < finalTotalIncome) {
+          return prev + 200; // Se incrementa en 200
+        }
+        return prev + 100; // Continúa incrementando lentamente
+      });
+    }, 10000); // Actualización cada 10 segundos
+
+    // Limpiar los intervalos cuando el componente se desmonte
+    return () => {
+      clearInterval(pendingInterval);
+      clearInterval(completedInterval);
+      clearInterval(incomeInterval);
+    };
+  }, []);
+
   return (
     <div className="main-panel">
       <h1 className="title">Panel de Control ServiTIC</h1>
 
       <div className="charts-container">
+        {/* Reparaciones Mensuales */}
         <div className="chart-box">
           <h2 className="chart-title">Reparaciones Mensuales</h2>
           <LineChart width={500} height={300} data={repairData}>
@@ -37,6 +88,7 @@ const MainPanel = () => {
           </LineChart>
         </div>
 
+        {/* Dispositivos Reparados */}
         <div className="chart-box">
           <h2 className="chart-title">Dispositivos Reparados</h2>
           <PieChart width={400} height={300}>
@@ -58,6 +110,7 @@ const MainPanel = () => {
           </PieChart>
         </div>
 
+        {/* Rendimiento de Reparaciones */}
         <div className="chart-box full-width">
           <h2 className="chart-title">Rendimiento de Reparaciones</h2>
           <BarChart width={900} height={300} data={repairData}>
@@ -72,18 +125,19 @@ const MainPanel = () => {
         </div>
       </div>
 
+      {/* Resúmenes */}
       <div className="summary-cards">
         <div className="card">
           <h3 className="card-title">Reparaciones Pendientes</h3>
-          <p className="card-value">15</p>
+          <p className="card-value">{pendingRepairs.toFixed(1)}</p>
         </div>
         <div className="card">
           <h3 className="card-title">Reparaciones Completadas</h3>
-          <p className="card-value">208</p>
+          <p className="card-value">{completedRepairs.toFixed(1)}</p>
         </div>
         <div className="card">
           <h3 className="card-title">Ingresos Totales</h3>
-          <p className="card-value">$45,600</p>
+          <p className="card-value">${totalIncome.toFixed(0)}</p>
         </div>
       </div>
     </div>
@@ -91,6 +145,11 @@ const MainPanel = () => {
 };
 
 export default MainPanel;
+
+
+
+
+
 
 
 
