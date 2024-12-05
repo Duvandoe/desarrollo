@@ -13,7 +13,7 @@ function home() {
             </div>
             <div className="inicio-content">
                 <h3>¡Bienvenido a ServTIC!</h3>
-                <h1>Aqui podras encontrar todo lo que necesitas</h1>
+                <h1>Aqui podras encontrar todo lo que necesitas en reparaciones de equipos electronicos</h1>
             </div>
         </section>
         <Inicio />
