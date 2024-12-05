@@ -246,6 +246,122 @@
       padding: 8px;
     }
   }
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+  z-index: 1000; /* Asegura que esté encima del contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh; /* Limita la altura del modal */
+  overflow-y: auto; /* Permite el desplazamiento dentro del modal */
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la visibilidad */
+  text-align: center;
+  }
+  
+  /* Animación para el modal */
+  @keyframes modalFadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Estilo para el botón de cancelación */
+  .btn-cancel {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Botón de guardar cambios */
+  .btn {
+    background-color: #003cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0052cc;
+  }
+  
+  /* Estilo del formulario */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-group select option {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Opciones seleccionadas */
+  .form-group select option:checked {
+    background-color: #003cff;
+    color: white;
+  }
+  /* Estilo para el campo Género */
+.form-group select {
+    width: 100%;
+    padding: 12px; /* Espaciado más grande para hacerlo más accesible */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Suaviza el cambio de color al interactuar */
+  }
+  
+  .form-group select:focus {
+    border-color: #003cff; /* Color de borde cuando se enfoca */
+    box-shadow: 0 0 5px rgba(0, 51, 255, 0.5); /* Sombra para indicar que el campo está enfocado */
+  }
+  
   
   
   
