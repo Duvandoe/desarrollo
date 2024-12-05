@@ -56,7 +56,6 @@ function Main(){
         <Route path='/gestordecliente' element={<Gestordecliente/>}/>
         <Route path='/gestordeempleado' element={<Gestordeempleado/>}/>
         <Route path='/gestordetarea' element={<Gestordetarea/>}/>
-
       </Routes>
       {!isClientePage && !isGestorAdmin && !isEmpleadoPage && <Footer />}
       {!isInicioLogin && !isGestorAdmin && !isEmpleadoPage && <Footercli />}
