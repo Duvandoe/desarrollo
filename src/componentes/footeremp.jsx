@@ -19,10 +19,10 @@ function Footercli() {
                     </div>
                     <ul>
                         <li>
-                            <Link to="/inicioclien">Inicio</Link>
+                            <Link to="/inicioemp">Inicio</Link>
                         </li>
                         <li>
-                            <a href="/reparaciones">Reparaciones</a>
+                            <a href="#">Reparaciones</a>
                         </li>
                     </ul>
                     <ul>
