@@ -11,7 +11,7 @@ function Sidebar() {
       </div>
       <ul>
         <li>
-          <Link to="/" className="sidebar-item">
+          <Link to="/gestordecliente" className="sidebar-item">
             <FaUser className="sidebar-icon" /> Gestión de Clientes
           </Link>
         </li>

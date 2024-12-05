@@ -10,6 +10,7 @@ import Cliente from './pages/inicioclien';
 import ClieNavbar from './componentes/navbarcli';
 import Footercli from './componentes/footercli';
 import Gestoradmin from './pages/gestoradmin';
+import Gestordecliente from './pages/clientes';
 
 
 function App() {
@@ -28,7 +29,7 @@ function Main(){
   const isInicioLogin = inicionologin.includes(location.pathname);
   const clientepage = ['/inicioclien'];
   const isClientePage = clientepage.includes(location.pathname);
-  const gestoradmin = ['/gestoradmin'];
+  const gestoradmin = ['/gestoradmin', '/gestordecliente'];
   const isGestorAdmin = gestoradmin.includes(location.pathname);
   return(
     <>
@@ -40,6 +41,7 @@ function Main(){
         <Route path="/registro" element={<Registro />} />
         <Route path='/inicioclien' element={<Cliente/>}/>
         <Route path='/gestoradmin' element={<Gestoradmin/>}/>
+        <Route path='/gestordecliente' element={<Gestordecliente/>}/>
       </Routes>
       {!isClientePage && !isGestorAdmin && <Footer />}
       {!isInicioLogin && !isGestorAdmin && <Footercli />}

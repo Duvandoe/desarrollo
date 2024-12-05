@@ -1,0 +1,156 @@
+/* Estilos generales del contenedor */
+.client-dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #003cff;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .sidebar-header {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 1.1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #0052cc;
+    transform: translateX(10px);
+  }
+  
+  .sidebar-item .sidebar-icon {
+    margin-right: 15px;
+    font-size: 1.4rem;
+  }
+  
+  /* Contenido principal (perfil del cliente) */
+  .client-profile {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+    overflow-y: auto;
+    border-radius: 8px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  .client-profile:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .client-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #003cff;
+  }
+  
+  /* Tabla de clientes */
+  .client-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .client-table th, .client-table td {
+    text-align: center;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .client-table th {
+    background-color: #003cff;
+    color: white;
+  }
+  
+  .client-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .client-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .client-table .btn {
+    padding: 8px 15px;
+    background-color: #003cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .client-table .btn:hover {
+    background-color: #0052cc;
+    transform: scale(1.05);
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .client-dashboard {
+      flex-direction: column;
+    }
+  
+    .client-profile {
+      margin-left: 0;
+      margin-top: 20px;
+      padding: 15px;
+    }
+  
+    .client-title {
+      font-size: 1.8rem;
+    }
+  
+    .client-table th, .client-table td {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  
+    .client-table .btn {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  
+  
+  
